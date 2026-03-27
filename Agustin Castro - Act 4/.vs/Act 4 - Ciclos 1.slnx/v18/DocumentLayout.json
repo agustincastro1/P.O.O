@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\desktop\\P.O.O\\Act 4 - Ciclos 1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{22552B54-2E39-4390-9173-3706F90300B0}|Actividad 4\\Actividad 4.csproj|c:\\desktop\\p.o.o\\act 4 - ciclos 1\\actividad 4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22552B54-2E39-4390-9173-3706F90300B0}|Actividad 4\\Actividad 4.csproj|solutionrelative:actividad 4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EA70360-9A74-4EE0-A3A6-FC4DB7BA1AD9}|Actividad 3\\Actividad 3.csproj|C:\\desktop\\P.O.O\\Act 4 - Ciclos 1\\actividad 3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EA70360-9A74-4EE0-A3A6-FC4DB7BA1AD9}|Actividad 3\\Actividad 3.csproj|solutionrelative:actividad 3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F000A234-2B52-470A-A135-376518414B83}|Actividad 2\\Actividad 2.csproj|C:\\desktop\\P.O.O\\Act 4 - Ciclos 1\\actividad 2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F000A234-2B52-470A-A135-376518414B83}|Actividad 2\\Actividad 2.csproj|solutionrelative:actividad 2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6ECD42C0-EC8E-47C1-96C5-8E7E9A715A26}|Actividad 1\\Actividad 1.csproj|C:\\desktop\\P.O.O\\Act 4 - Ciclos 1\\actividad 1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6ECD42C0-EC8E-47C1-96C5-8E7E9A715A26}|Actividad 1\\Actividad 1.csproj|solutionrelative:actividad 1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\desktop\\P.O.O\\Act 4 - Ciclos 1\\Actividad 4\\Program.cs",
+              "RelativeDocumentMoniker": "Actividad 4\\Program.cs",
+              "ToolTip": "C:\\desktop\\P.O.O\\Act 4 - Ciclos 1\\Actividad 4\\Program.cs",
+              "RelativeToolTip": "Actividad 4\\Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAswDgAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T12:08:25.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\desktop\\P.O.O\\Act 4 - Ciclos 1\\Actividad 3\\Program.cs",
+              "RelativeDocumentMoniker": "Actividad 3\\Program.cs",
+              "ToolTip": "C:\\desktop\\P.O.O\\Act 4 - Ciclos 1\\Actividad 3\\Program.cs",
+              "RelativeToolTip": "Actividad 3\\Program.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T11:56:11.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\desktop\\P.O.O\\Act 4 - Ciclos 1\\Actividad 2\\Program.cs",
+              "RelativeDocumentMoniker": "Actividad 2\\Program.cs",
+              "ToolTip": "C:\\desktop\\P.O.O\\Act 4 - Ciclos 1\\Actividad 2\\Program.cs",
+              "RelativeToolTip": "Actividad 2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T11:49:56.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\desktop\\P.O.O\\Act 4 - Ciclos 1\\Actividad 1\\Program.cs",
+              "RelativeDocumentMoniker": "Actividad 1\\Program.cs",
+              "ToolTip": "C:\\desktop\\P.O.O\\Act 4 - Ciclos 1\\Actividad 1\\Program.cs",
+              "RelativeToolTip": "Actividad 1\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACoAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T11:01:31.451Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

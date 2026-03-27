@@ -1,0 +1,7 @@
+C:\Users\alumno\Desktop\Act 4 - Ciclos 1\Actividad 1\bin\Debug\Actividad 1.exe.config
+C:\Users\alumno\Desktop\Act 4 - Ciclos 1\Actividad 1\bin\Debug\Actividad 1.exe
+C:\Users\alumno\Desktop\Act 4 - Ciclos 1\Actividad 1\bin\Debug\Actividad 1.pdb
+C:\Users\alumno\Desktop\Act 4 - Ciclos 1\Actividad 1\obj\Debug\Actividad 1.csproj.AssemblyReference.cache
+C:\Users\alumno\Desktop\Act 4 - Ciclos 1\Actividad 1\obj\Debug\Actividad 1.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Desktop\Act 4 - Ciclos 1\Actividad 1\obj\Debug\Actividad 1.exe
+C:\Users\alumno\Desktop\Act 4 - Ciclos 1\Actividad 1\obj\Debug\Actividad 1.pdb
