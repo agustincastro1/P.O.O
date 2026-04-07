@@ -5,3 +5,10 @@ C:\desktop\P.O.O\Act 4 - Ciclos 1\Actividad 4\obj\Debug\Actividad 4.csproj.Assem
 C:\desktop\P.O.O\Act 4 - Ciclos 1\Actividad 4\obj\Debug\Actividad 4.csproj.CoreCompileInputs.cache
 C:\desktop\P.O.O\Act 4 - Ciclos 1\Actividad 4\obj\Debug\Actividad 4.exe
 C:\desktop\P.O.O\Act 4 - Ciclos 1\Actividad 4\obj\Debug\Actividad 4.pdb
+C:\Users\Agus\P.O.O\P.O.O\Agustin Castro - Act 4\Actividad 4\bin\Debug\Actividad 4.exe.config
+C:\Users\Agus\P.O.O\P.O.O\Agustin Castro - Act 4\Actividad 4\bin\Debug\Actividad 4.exe
+C:\Users\Agus\P.O.O\P.O.O\Agustin Castro - Act 4\Actividad 4\bin\Debug\Actividad 4.pdb
+C:\Users\Agus\P.O.O\P.O.O\Agustin Castro - Act 4\Actividad 4\obj\Debug\Actividad 4.csproj.AssemblyReference.cache
+C:\Users\Agus\P.O.O\P.O.O\Agustin Castro - Act 4\Actividad 4\obj\Debug\Actividad 4.csproj.CoreCompileInputs.cache
+C:\Users\Agus\P.O.O\P.O.O\Agustin Castro - Act 4\Actividad 4\obj\Debug\Actividad 4.exe
+C:\Users\Agus\P.O.O\P.O.O\Agustin Castro - Act 4\Actividad 4\obj\Debug\Actividad 4.pdb

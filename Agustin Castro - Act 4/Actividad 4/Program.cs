@@ -44,6 +44,7 @@ namespace Actividad_4
                     if (saldoActual > 0)
                     {
                         estadoCuenta = "Acreedor. ";
+                        saldoAcreedores = saldoAcreedores + saldoActual;
                     }
                     if (saldoActual == 0)
                     {
@@ -54,7 +55,6 @@ namespace Actividad_4
                         estadoCuenta = " Deudor. ";
                     }
                     info = info + "Numero de cuenta: " + numeroCuenta + " Estado de la cuenta: " + estadoCuenta;
-                    saldoAcreedores = saldoAcreedores + saldoActual;
                 }
             } while (numeroCuenta > 0);
             Console.WriteLine(info + " Saldo de acreedores: " + saldoAcreedores);
