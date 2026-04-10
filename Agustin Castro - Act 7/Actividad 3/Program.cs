@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace Actividad_3
 {
@@ -26,9 +27,13 @@ namespace Actividad_3
                 Vector[i] = int.Parse(linea);
             }
         }
-
+        int mas500 = 0;
+        int promedio;
+        
         public void calcular()
         {
+            
+            int suma = 0;
             int aux = 0;
             for (int i = 0; i < 6; i++)
             {
@@ -41,13 +46,21 @@ namespace Actividad_3
                         Vector[t+1] = aux;
                     }
                 }
+                if (Vector[i] >500)
+                {
+                    mas500++;
+                }
+                suma = suma + Vector[i];
             }
+            promedio = suma / 6;
         }
 
         public void mostrar()
         {
             Console.WriteLine("la puntuacion mas baja es: " + Vector[0]);
             Console.WriteLine("la puntuacion mas alta es: " + Vector[5]);
+            Console.WriteLine("la cantidad de puntos mayores a 500 es: " + mas500);
+            Console.WriteLine("el podmedio de puntos es: " + promedio);
         }
 
         static void Main(string[] args)
