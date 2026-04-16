@@ -36,19 +36,19 @@ namespace Actividad_1
             {
                 if (vector[i]>36)
                 {
-                    mayores36 = mayores36 + vector[i];
+                    mayores36++;
                 }
                 if (vector[i] > 50)
                 {
-                    mayores50 = mayores50 + vector[i];
+                    mayores50++;
                 }
                 valorAcumulado = valorAcumulado + vector[i];
             }
         }
         public void mostrar()
         {
-            Console.WriteLine("valor acumulado de los vectores mayores a 36 = " + mayores36);
-            Console.WriteLine("valor acumulado de los vectores mayores a 50 = " + mayores50);
+            Console.WriteLine("cantidad de valores mayores a 36 = " + mayores36);
+            Console.WriteLine("cantidad de valores mayores a 50 = " + mayores50);
             Console.WriteLine("valor acumulado de todos los valores del vector = " + valorAcumulado);
         }
         static void Main(string[] args)
