@@ -59,7 +59,7 @@ namespace Actividad_3
         {
             Console.WriteLine("la puntuacion mas baja es: " + Vector[0]);
             Console.WriteLine("la puntuacion mas alta es: " + Vector[5]);
-            Console.WriteLine("la cantidad de veces que se superaron los 500 puntos es: " + mas500);
+            Console.WriteLine("la cantidad de puntos mayores a 500 es: " + mas500);
             Console.WriteLine("el podmedio de puntos es: " + promedio);
         }
 
