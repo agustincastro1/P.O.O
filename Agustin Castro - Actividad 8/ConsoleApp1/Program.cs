@@ -26,9 +26,39 @@ namespace Actividad_2
             }
         }
 
+        public void ordenar()
+        {
+            for (int i = 0;i < vector.Length; i++)
+            {
+                for(int j = 0;j < vector.Length - i; j++)
+                {
+                    if (j!= 4) {
+                        if (vector[j].CompareTo(vector[j + 1]) > 0)
+                        {
+                            string aux;
+                            aux = vector[j];
+                            vector[j] = vector[j + 1];
+                            vector[j + 1] = aux;
+                        }
+                    }
+                }
+            }
+        }
+
+        public void imprimir()
+        {
+            Console.WriteLine("paises ordenados alfabericamente: ");
+            for (int i = 0; i < vector.Length; i++)
+            {
+                Console.WriteLine(vector[i]);
+            }
+        }
          static void Main(string[] args)
         {
-
+            Vectores2 v2 = new Vectores2();
+            v2.cargar();
+            v2.ordenar();
+            v2.imprimir();
             Console.ReadKey();
         }
     }

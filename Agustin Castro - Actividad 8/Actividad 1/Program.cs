@@ -14,7 +14,6 @@ namespace Actividad_1
         */
 
         private int[] Vector;
-        private int aux;
         private int menor;
         public void cargar()
         {
