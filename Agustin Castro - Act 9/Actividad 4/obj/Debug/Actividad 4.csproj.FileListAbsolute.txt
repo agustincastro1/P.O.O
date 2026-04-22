@@ -1,0 +1,7 @@
+C:\Users\Agus\Desktop\P.O.O\Agustin Castro - Act 9\Actividad 4\bin\Debug\Actividad 4.exe.config
+C:\Users\Agus\Desktop\P.O.O\Agustin Castro - Act 9\Actividad 4\bin\Debug\Actividad 4.exe
+C:\Users\Agus\Desktop\P.O.O\Agustin Castro - Act 9\Actividad 4\bin\Debug\Actividad 4.pdb
+C:\Users\Agus\Desktop\P.O.O\Agustin Castro - Act 9\Actividad 4\obj\Debug\Actividad 4.csproj.AssemblyReference.cache
+C:\Users\Agus\Desktop\P.O.O\Agustin Castro - Act 9\Actividad 4\obj\Debug\Actividad 4.csproj.CoreCompileInputs.cache
+C:\Users\Agus\Desktop\P.O.O\Agustin Castro - Act 9\Actividad 4\obj\Debug\Actividad 4.exe
+C:\Users\Agus\Desktop\P.O.O\Agustin Castro - Act 9\Actividad 4\obj\Debug\Actividad 4.pdb
