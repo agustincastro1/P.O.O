@@ -34,19 +34,34 @@ namespace Actividad_2
             }
         }
 
+        public void intercambiar()
+        {
+            for (int c = 0; c < matriz.GetLength(1); c++)
+            {
+                int aux = matriz[0, c];
+                matriz[0, c] = matriz[1, c];
+                matriz[1, c] = aux;
+            }
+        }
+
         public void mostrar()
         {
             for(int f = 0; f < matriz.GetLength(0); f++)
             {
                 for (int c = 0; c < matriz.GetLength(1); c++)
-                {
-
+                {   
+                    Console.Write(matriz[f, c] + " ");  
                 }
+                Console.WriteLine();
             }
         }
 
         static void Main(string[] args)
         {
+            Matrices2 m2 = new Matrices2();
+            m2.cargar();
+            m2.intercambiar();
+            m2.mostrar();
             Console.ReadKey();
         }
     }
