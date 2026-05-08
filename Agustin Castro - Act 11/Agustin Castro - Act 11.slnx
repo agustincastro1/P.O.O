@@ -1,3 +1,5 @@
 <Solution>
-  <Project Path="Actividad 1/Actividad 1.csproj" />
+  <Project Path="Actividad 1/Actividad 1.csproj" Id="86ce61b8-37c8-4fba-aa94-9208636379ad" />
+  <Project Path="Actividad 2/Actividad 2.csproj" Id="bc1a960d-0eaf-4284-8845-1f39446b2ee7" />
+  <Project Path="Actividad 3/Actividad 3.csproj" Id="6ec290ea-85f7-4ce8-8fdf-d10391bbd50a" />
 </Solution>

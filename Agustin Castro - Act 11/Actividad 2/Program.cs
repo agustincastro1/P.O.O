@@ -24,14 +24,40 @@ namespace Actividad_2
             {
                 matriz[i] = new int[i + 1];
             }
-
-            for (int f = 0; f < matriz.GetLength(0); f++)
+        }
+        public void asignarValores()
+        {
+            string linea;
+            for (int i = 0; i < matriz.Length; i++)
             {
+                for(int j = 0; j < matriz[i].GetLength(0); j++)
+                {
+                    Console.WriteLine("ingrese el un numero: ");
+                    linea = Console.ReadLine();
+                    matriz[i][j] = int.Parse(linea);
+                }
+            }
+        }
 
+        public void Mostrar()
+        {
+            Console.WriteLine("Matriz rellenada: ");
+            for (int i = 0; i < matriz.Length; i++)
+            {
+                for (int j = 0; j < matriz[i].GetLength(0); j++)
+                {
+                    Console.Write(matriz[i][j] + " ");
+                }
+                Console.WriteLine();
             }
         }
         static void Main(string[] args)
         {
+            MatrizDent2 MD2 = new MatrizDent2();
+            MD2.cargar();
+            MD2.asignarValores();
+            MD2.Mostrar();
+            Console.ReadKey();
         }
     }
 }

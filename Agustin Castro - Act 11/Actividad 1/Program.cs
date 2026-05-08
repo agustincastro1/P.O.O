@@ -24,6 +24,7 @@ namespace Actividad_1
         private string[] paises;
         private int[,] temperaturas;
         private int[] tempMedia;
+        
         public void cargar()
         {
             Console.WriteLine("ingrese la cantidad de paises: ");
