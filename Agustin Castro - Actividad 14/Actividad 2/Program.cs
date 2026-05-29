@@ -26,15 +26,85 @@ namespace Actividad_2
 
         public Pasajero()
         {
+            string linea;
+            Console.WriteLine("Ingrese un Nombre: ");
+            linea = Console.ReadLine();
+            Nombre = linea;
 
+            Console.WriteLine("Ingrese un DNI: ");
+            linea = Console.ReadLine();
+            DNI = int.Parse(linea);
+
+            Console.WriteLine("Ingrese el peso en KG de una maleta: ");
+            linea = Console.ReadLine();
+            EquipajeKilos = float.Parse(linea);
+        }
+
+        public string retornarNomrbe()
+        {
+            return Nombre;
+        }
+
+        public int retronarDNI()
+        {
+            return DNI;
+        }
+
+        public float retornarPeso()
+        {
+            return EquipajeKilos;
         }
     }
 
     class Vuelo
     {
+        private Pasajero[] Pasajeros;
+        public Vuelo()
+        {
+            Pasajeros = new Pasajero[4];
+            for (int i = 0; i < 4; i++)
+            {
+                Pasajeros[i] = new Pasajero();
+            }
+        }
+
+        public void datosPasajeros()
+        {
+            Console.WriteLine("Todos los datos de los pasajeros");
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine("Nombre: " + Pasajeros[i].retornarNomrbe() + " DNI: " + Pasajeros[i].retronarDNI() + " Peso del equipaje: " + Pasajeros[i].retornarPeso());
+            }
+        }
+
+        public void pesoEquipaje()
+        {
+            float pesoTotal = 0;
+            for(int i = 0;i < 4; i++)
+            {
+                pesoTotal = pesoTotal + Pasajeros[i].retornarPeso(); 
+            }
+            Console.WriteLine("El peso total que lleva el avion con los equipajes es: " + pesoTotal);
+        }
+
+        public void limitePeso()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                if (Pasajeros[i].retornarPeso() > 23)
+                {
+                    Console.WriteLine("El pasajero " + Pasajeros[i].retornarNomrbe() + " con DNI " + Pasajeros[i].retronarDNI() + " Exede el limite de peso del equipaje");
+                }
+            }
+        }
 
         static void Main(string[] args)
         {
+            Vuelo v = new Vuelo();
+            v.datosPasajeros();
+            v.pesoEquipaje();
+            v.limitePeso();
+            Console.ReadKey();
         }
     }
 }
