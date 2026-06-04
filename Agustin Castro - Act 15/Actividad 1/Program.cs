@@ -30,15 +30,11 @@ namespace Actividad_1
     class Paciente
     {
         private string nombre;
-        private int[][] ritmoCardiaco;
-        private int dias, momentos;
+        private int[,] ritmoCardiaco;
         
         public Paciente()
         {
-            ritmoCardiaco = new int [3][];
-            ritmoCardiaco[0] = new int[4];
-            ritmoCardiaco[1] = new int[4];
-            ritmoCardiaco[2] = new int[4];
+            ritmoCardiaco = new int [3,4];
 
             string linea;
             Console.WriteLine("Ingrese el nombre del paciente: ");
@@ -51,7 +47,7 @@ namespace Actividad_1
                 {
                     Console.WriteLine("ingrese un ritmo cardiaco:");
                     linea = Console.ReadLine();
-                    ritmoCardiaco[i][j] = int.Parse(linea);
+                    ritmoCardiaco[i,j] = int.Parse(linea);
                 }
             }
 
@@ -61,7 +57,7 @@ namespace Actividad_1
             return nombre;
         }
 
-        public int[][] retornarPulsaciones()
+        public int[,] retornarPulsaciones()
         {
                 return ritmoCardiaco;
         }
@@ -80,17 +76,66 @@ namespace Actividad_1
             }
         public void imprimirGrilla()
         {
-            Console.WriteLine("Grilla de los pacientes: ");
+            string[] momentos = { "Mañana", "Mediodía", "Tarde", "Noche" };
+
             for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine("Mañana: " + pacientes[i].retornarPulsaciones()[i,0]);
-                Console.WriteLine("Medio dia: " + pacientes[i].retornarPulsaciones());
-                Console.WriteLine("Tarde: " + pacientes[i].retornarPulsaciones());
-                Console.WriteLine("Nohce: " + pacientes[i].retornarPulsaciones());
+                Console.WriteLine("Paciente: " + pacientes[i].retornarNombre());
+                int[,] pulsaciones = pacientes[i].retornarPulsaciones();
+
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.WriteLine("  Día " + (j + 1) + ":");
+                    for (int f = 0; f < 4; f++)
+                    {
+                        Console.WriteLine(momentos[f] + ": " + pulsaciones[j, f]);
+                    }
+                }
+            }
+        }
+
+        public void calcularPromedio()
+        {
+            for (int i = 0;i < 3; i++)
+            {
+                float suma = 0;
+                int[,] pulsaciones = pacientes[i].retornarPulsaciones();
+                for (int d = 0; d < 3; d++)
+                {
+                    for (int m = 0; m < 4; m++)
+                    {
+                        suma = suma + pulsaciones[d, m];
+                    }
+                }
+                float promedio = suma / 12;
+                Console.WriteLine("Promedio de pulsaciones del paciente " + pacientes[i].retornarNombre() + ": " + promedio);
+            }
+        }
+
+        public void verificarTaquicardia()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                for(int j = 0; j < 3; j++)
+                {
+                    for (int f = 0; f < 4; f++)
+                    {
+                        int lectura = pacientes[i].retornarPulsaciones()[j, f];
+                        if (lectura > 120)
+                        {
+                            Console.WriteLine("el Paciente " + pacientes[i].retornarNombre() + " registró taquicardia con una lectura de: " + lectura);
+                        }
+                    }
+                }
             }
         }
         static void Main(string[] args)
         {
+                salaMonitoreo sala = new salaMonitoreo();
+                sala.imprimirGrilla();
+                sala.calcularPromedio();
+                sala.verificarTaquicardia();
+            Console.ReadKey();
         }
     }
 }
