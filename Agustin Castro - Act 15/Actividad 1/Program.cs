@@ -31,10 +31,10 @@ namespace Actividad_1
     {
         private string nombre;
         private int[,] ritmoCardiaco;
-        
+
         public Paciente()
         {
-            ritmoCardiaco = new int [3,4];
+            ritmoCardiaco = new int[3, 4];
 
             string linea;
             Console.WriteLine("Ingrese el nombre del paciente: ");
@@ -47,7 +47,7 @@ namespace Actividad_1
                 {
                     Console.WriteLine("ingrese un ritmo cardiaco:");
                     linea = Console.ReadLine();
-                    ritmoCardiaco[i,j] = int.Parse(linea);
+                    ritmoCardiaco[i, j] = int.Parse(linea);
                 }
             }
 
@@ -59,21 +59,21 @@ namespace Actividad_1
 
         public int[,] retornarPulsaciones()
         {
-                return ritmoCardiaco;
+            return ritmoCardiaco;
         }
 
     }
     class salaMonitoreo
     {
         private Paciente[] pacientes;
-            public salaMonitoreo()
-            { 
-                pacientes = new Paciente[3];
-                for (int i = 0; i < 3; i++)
-                {
-                    pacientes[i] = new Paciente();
-                }
+        public salaMonitoreo()
+        {
+            pacientes = new Paciente[3];
+            for (int i = 0; i < 3; i++)
+            {
+                pacientes[i] = new Paciente();
             }
+        }
         public void imprimirGrilla()
         {
             string[] momentos = { "Mañana", "Mediodía", "Tarde", "Noche" };
@@ -96,7 +96,7 @@ namespace Actividad_1
 
         public void calcularPromedio()
         {
-            for (int i = 0;i < 3; i++)
+            for (int i = 0; i < 3; i++)
             {
                 float suma = 0;
                 int[,] pulsaciones = pacientes[i].retornarPulsaciones();
@@ -116,7 +116,7 @@ namespace Actividad_1
         {
             for (int i = 0; i < 3; i++)
             {
-                for(int j = 0; j < 3; j++)
+                for (int j = 0; j < 3; j++)
                 {
                     for (int f = 0; f < 4; f++)
                     {
@@ -131,10 +131,10 @@ namespace Actividad_1
         }
         static void Main(string[] args)
         {
-                salaMonitoreo sala = new salaMonitoreo();
-                sala.imprimirGrilla();
-                sala.calcularPromedio();
-                sala.verificarTaquicardia();
+            salaMonitoreo sala = new salaMonitoreo();
+            sala.imprimirGrilla();
+            sala.calcularPromedio();
+            sala.verificarTaquicardia();
             Console.ReadKey();
         }
     }

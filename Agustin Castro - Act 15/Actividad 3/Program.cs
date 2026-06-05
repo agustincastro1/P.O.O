@@ -72,7 +72,7 @@ reservas, indicando a qué reserva pertenece.
             }
         }
 
-        public void mostrarTotales()
+        public void enlistarReservas()
         {
             for (int i = 0; i < reservas.Length; i++)
             {
@@ -94,24 +94,24 @@ reservas, indicando a qué reserva pertenece.
 
         public void mayorConcentracion()
         {
-            int[,] primeraMatriz = reservas[0].retornarAvistamientos();
+            int[,] primerAvistamiento = reservas[0].retornarAvistamientos();
 
-            int maximo = primeraMatriz[0, 0];
+            int maximo = primerAvistamiento[0, 0];
             string nombreReserva = reservas[0].retornarNombre();
             int fila = 0;
             int columna = 0;
 
             for (int i = 0; i < reservas.Length; i++)
             {
-                int[,] matriz = reservas[i].retornarAvistamientos();
+                int[,] Avistamientos = reservas[i].retornarAvistamientos();
 
                 for (int f = 0; f < 3; f++)
                 {
                     for (int c = 0; c < 3; c++)
                     {
-                        if (matriz[f, c] > maximo)
+                        if (Avistamientos[f, c] > maximo)
                         {
-                            maximo = matriz[f, c];
+                            maximo = Avistamientos[f, c];
                             nombreReserva = reservas[i].retornarNombre();
                             fila = f;
                             columna = c;
@@ -120,8 +120,7 @@ reservas, indicando a qué reserva pertenece.
                 }
             }
 
-            Console.WriteLine("La mayor concentración de avistamientos se registró en la reserva: "
-                              + nombreReserva);
+            Console.WriteLine("La mayor concentración de avistamientos se registró en la reserva: " + nombreReserva);
             Console.WriteLine("Coordenada: [" + fila + "," + columna + "]");
             Console.WriteLine("Cantidad de avistamientos: " + maximo);
         }
@@ -129,10 +128,8 @@ reservas, indicando a qué reserva pertenece.
         static void Main(string[] args)
         {
             CentroEcologico centro = new CentroEcologico();
-
-            centro.mostrarTotales();
+            centro.enlistarReservas();
             centro.mayorConcentracion();
-
             Console.ReadKey();
         }
     }

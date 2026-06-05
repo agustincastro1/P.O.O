@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace Actividad_2
 {
     /*
@@ -98,7 +99,7 @@ total (la suma de todos sus contenedores).
         public void naveMenorPesoAcumulado()
         {
             double[] pesoNaves = new double[naves.Length];
-            for(int i = 0; i < naves.Length; i++)
+            for (int i = 0; i < naves.Length; i++)
             {
                 double pesoAcumulado = 0;
                 for (int j = 0; j < pesoContenedores[i].Length; j++)
@@ -109,7 +110,7 @@ total (la suma de todos sus contenedores).
             }
             double minPeso = pesoNaves[0];
             string nombreNaveMinPeso = naves[0].retornarNombre();
-            for (int i = 0;i < naves.Length; i++)
+            for (int i = 0; i < naves.Length; i++)
             {
                 if (pesoNaves[i] < minPeso)
                 {

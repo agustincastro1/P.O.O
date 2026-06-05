@@ -6,6 +6,32 @@ using System.Threading.Tasks;
 
 namespace Actividad_4
 {
+    /*
+     Línea de Ensamblaje Robótico
+En una planta de fabricación automatizada, cada robot industrial realiza tareas de
+ensamblaje complejas divididas en operaciones secundarias de duración variable.
+● Diseñar la clase RobotEnsamblador que tenga como atributos privados:
+1. ModeloRobot.
+2. Una matriz irregular de tipo float (float[][] tiemposOperacion) donde cada
+fila representa una de las 4 fases principales del proceso (Estructura,
+Cableado, Pintura y Testeo), y cada columna los segundos que demoró en
+completar las distintas subtareas de esa fase (por ejemplo, en la fase de
+Estructura el robot puede tener 3 sub-tareas, pero en la de Testeo solo tiene
+1).
+3. El constructor de RobotEnsamblador debe pedir su modelo, preguntar para
+cada una de las 4 fases de fabricación cuántas sub-tareas requirió realizar
+(definiendo el tamaño de cada fila) y cargar la duración en segundos de cada
+una de ellas.
+● Diseñar la clase colaboradora PlantaIndustrial que gestione a 3 objetos de la clase
+RobotEnsamblador. Implementar en PlantaIndustrial:
+1. Un constructor que cargue la información de los 3 robots instalados en la
+planta.
+2. Un método que muestre un reporte detallado con los tiempos de operación
+de cada robot fase por fase.
+3. Un método que calcule el promedio general de tiempo por tarea de cada
+robot y declare al "Robot más Eficiente"; (aquel que registre el promedio de
+tiempo por operación más bajo de la planta).
+     */
     class RobotEnsamblador
     {
         private string modeloRobot;
@@ -70,7 +96,7 @@ namespace Actividad_4
 
                 float[][] tiempos = robots[i].retornarTiempos();
 
-                for (int j = 0; j < tiempos.Length; j++)
+                for (int j = 0; j < fases.Length; j++)
                 {
                     Console.WriteLine("Fase: " + fases[j]);
 
@@ -86,12 +112,13 @@ namespace Actividad_4
 
         public void robotMasEficiente()
         {
-            float menorPromedio = 0;
-            string nombreRobot = "";
-
+            float[] promedio;
+            promedio = new float[4];
+            string nombreRobot = robots[0].retornarModelo();
+            float suma;
             for (int i = 0; i < robots.Length; i++)
             {
-                float suma = 0;
+                suma = 0;
                 int cantidadTareas = 0;
 
                 float[][] tiempos = robots[i].retornarTiempos();
@@ -100,21 +127,19 @@ namespace Actividad_4
                 {
                     for (int k = 0; k < tiempos[j].Length; k++)
                     {
-                        suma += tiempos[j][k];
+                        suma = suma + tiempos[j][k];
                         cantidadTareas++;
+                        promedio[i] = suma / cantidadTareas;
                     }
                 }
-
-                float promedio = suma / cantidadTareas;
-
-                Console.WriteLine("Promedio del robot "
-                    + robots[i].retornarModelo()
-                    + ": "
-                    + promedio);
-
-                if (i == 0 || promedio < menorPromedio)
+                Console.WriteLine("Promedio del robot " + robots[i].retornarModelo() + ": " + promedio[i]);
+            }
+            float menorPromedio = promedio[0];
+            for (int i = 0; i < robots.Length; i++)
+            {
+                if (promedio[i] < menorPromedio)
                 {
-                    menorPromedio = promedio;
+                    menorPromedio = promedio[i];
                     nombreRobot = robots[i].retornarModelo();
                 }
             }
@@ -127,10 +152,8 @@ namespace Actividad_4
         static void Main(string[] args)
         {
             PlantaIndustrial planta = new PlantaIndustrial();
-
             planta.mostrarReporte();
             planta.robotMasEficiente();
-
             Console.ReadKey();
         }
     }
