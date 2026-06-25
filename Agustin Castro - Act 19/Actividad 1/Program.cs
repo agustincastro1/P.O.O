@@ -57,6 +57,7 @@ Desde la clase principal, cargar 3 reservas y mostrar cuál cliente pagará más
         {
             Program p = new Program();
             p.CalcularPago();
+            Console.ReadKey();
         }
     }
 }

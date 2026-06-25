@@ -41,11 +41,20 @@ Desde la clase principal, cargar 2 libros y mostrar cuál es el más extenso.
                     Console.WriteLine(Libros[i].titulo + " Es un libro corto");
                 }
             }
+            if (Libros[0].paginas > Libros[1].paginas)
+            {
+                Console.WriteLine("El libro " + Libros[0].titulo + " es mas extenso");
+            }
+            else
+            {
+                Console.WriteLine("El libro " + Libros[1].titulo + " es mas extenso");
+            }
         }
         static void Main(string[] args)
         {
             Program P = new Program();
             P.Resumen();
+            Console.ReadKey();
         }
     }
 }
