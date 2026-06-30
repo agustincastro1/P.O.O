@@ -31,9 +31,8 @@ namespace Actividad_4
                 return Especie;
             }
         }
-        public Animal()
+        public Animal(string especie)
         {
-            especie = "perro";
             Console.WriteLine("Especie: " + especie);
         }
     }
@@ -41,7 +40,7 @@ namespace Actividad_4
     class Mamifero : Animal
     {
         string tipoAlimentacion;
-        private  string TipoAlimentacion
+        private string TipoAlimentacion
         {
             set
             {
@@ -52,10 +51,9 @@ namespace Actividad_4
                 return tipoAlimentacion;
             }
         }
-        public Mamifero()
+        public Mamifero(string especie, string tipoAlimentacion) : base(especie)
         {
-            tipoAlimentacion = "Carnivoro";
-            Console.WriteLine("tipo de alimentacion: " + tipoAlimentacion);
+            Console.WriteLine("tipo de alimentacion: " + TipoAlimentacion);
         }
     }
 
@@ -74,14 +72,13 @@ namespace Actividad_4
                 return Nombre;
             }
         }
-        public Perro()
+        public Perro(string especie, string tipoAlimentacion, string nombre) : base(especie, tipoAlimentacion)
         {
-            nombre = "Anda pa alla";
             Console.WriteLine("Nombre: " +  nombre);
         }
         static void Main(string[] args)
         {
-            Perro p = new Perro();
+            Perro p = new Perro("Canino", "Carnivoro", "Anda pa alla");
             Console.ReadKey();
         }
     }
