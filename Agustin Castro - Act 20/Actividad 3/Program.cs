@@ -63,15 +63,26 @@ nombres de zonas y total de visitas.
             List<(string nombre, int visitasTotales)> listaVisitas = new List<(string nombre, int visitasTotales)>();
             for (int i = 0; i < 3; i++)
             {
-                listaVisitas.Add((Console.ReadLine(), visitasPorZona[i]));
+                Console.WriteLine($"Ingrese el nombre de la zona {i + 1}:");
+                string nombreZona = Console.ReadLine();
+                listaVisitas.Add((nombreZona, visitasPorZona[i]));
             }
-            foreach (var Inst in listaVisitas)
-            {
-                if ()
-                {
 
+            Console.WriteLine("Zonas visitadas:");
+            foreach (var zV in listaVisitas)
+            {
+                Console.WriteLine($"{zV.nombre}: {zV.visitasTotales} visitas");
+            }
+
+            var zonaMasVisitada = listaVisitas[0];
+            foreach (var zV in listaVisitas)
+            {
+                if (zV.visitasTotales > zonaMasVisitada.visitasTotales)
+                {
+                    zonaMasVisitada = zV;
                 }
             }
+            Console.WriteLine($"La zona más visitada fue: {zonaMasVisitada.nombre} con {zonaMasVisitada.visitasTotales} visitas");
         }
 
         static void Main(string[] args)
