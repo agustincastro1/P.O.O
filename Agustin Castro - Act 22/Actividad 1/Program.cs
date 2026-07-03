@@ -22,63 +22,27 @@ que cargue valores por defecto (sobrecarga de constructores).
         private DateTime horaInicio;
         private DateTime horaFin;
 
-        public string NombreClase
-        {
-            set
-            {
-                this.nombreClase = value;
-            }
-            get
-            {
-                return this.nombreClase;
-            }
-        }
-
-        public DateTime HoraInicio
-        {
-            set
-            {
-                this.horaInicio = value;
-            }
-            get
-            {
-                return this.horaInicio;
-            }
-        }
-
-        public DateTime HoraFin
-        {
-            set
-            {
-                this.horaFin = value;
-            }
-            get
-            {
-                return this.horaFin;
-            }
-        }
-
         public ClaseGimnasio()
         {
             Console.WriteLine("Ingrese el nombre de la clase:");
-            this.nombreClase = Console.ReadLine();
+            nombreClase = Console.ReadLine();
             Console.WriteLine("Ingrese la hora de inicio (Hora:Minutos):");
-            this.horaInicio = DateTime.Parse(Console.ReadLine());
+            horaInicio = DateTime.Parse(Console.ReadLine());
             Console.WriteLine("Ingrese la hora de fin (Hora:Minutos):");
-            this.HoraFin = DateTime.Parse(Console.ReadLine());
+            horaFin = DateTime.Parse(Console.ReadLine());
         }
 
         public ClaseGimnasio(string nombre, DateTime inicio, DateTime fin)
         {
-            this.nombreClase = nombre;
-            this.horaInicio = inicio;
-            this.HoraFin = fin;
+            nombreClase = nombre;
+            horaInicio = inicio;
+            horaFin = fin;
         }
 
         public TimeSpan CalcularDuracion()
         {
-            TimeSpan duracion = this.HoraFin - this.horaInicio;
-            Console.WriteLine($"Duración de la clase {this.nombreClase}: {duracion}");
+            TimeSpan duracion = horaFin - horaInicio;
+            Console.WriteLine($"Duración de la clase {nombreClase}: {duracion}");
             return duracion;
         }
 
@@ -103,7 +67,7 @@ que cargue valores por defecto (sobrecarga de constructores).
                 }
             }
 
-            Console.WriteLine($"La clase de mayor duración es: {mayorDuracion.NombreClase} ({duracionMayor})");
+            Console.WriteLine($"La clase de mayor duración es: {mayorDuracion.nombreClase} ({duracionMayor})");
 
             Console.WriteLine("--------------------------------------------------");
 
@@ -111,13 +75,14 @@ que cargue valores por defecto (sobrecarga de constructores).
 
             for (int i = 1; i < clases.Length; i++)
             {
-                if (clases[i].HoraInicio < masTemprana.HoraInicio)
+                if (clases[i].horaInicio < masTemprana.horaInicio)
                 {
                     masTemprana = clases[i];
                 }
             }
 
-            Console.WriteLine($"La clase más temprana es: {masTemprana.NombreClase} a las {masTemprana.HoraInicio:HH:mm}");
+            Console.WriteLine($"La clase más temprana es: {masTemprana.nombreClase} a las {masTemprana.horaInicio:HH:mm}");
+            Console.ReadKey();
         }
     }
 }
