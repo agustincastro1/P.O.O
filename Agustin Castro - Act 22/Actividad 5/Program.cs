@@ -242,7 +242,7 @@ o El corredor más rápido.
             Console.Clear();
 
             Console.SetCursorPosition(25, 25);
-            Console.Write($"La carrera con mayor duración es la de Código: {carreraMasLarga.Codigo} con una duración de {duracionMayor}");
+            Console.WriteLine($"La carrera con mayor duración es la de Código: {carreraMasLarga.Codigo} con una duración de {duracionMayor}");
 
             Console.SetCursorPosition(25, 40);
 
