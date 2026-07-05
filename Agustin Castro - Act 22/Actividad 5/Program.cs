@@ -32,14 +32,26 @@ o El corredor más rápido.
 
         public int Codigo
         {
-            set { this.codigo = value; }
-            get { return codigo; }
+            set 
+            {
+                this.codigo = value; 
+            }
+            get 
+            {
+                return codigo; 
+            }
         }
 
         public List<corredor> Corredores
         {
-            set { this.corredores = value; }
-            get { return corredores; }
+            set 
+            {
+                this.corredores = value; 
+            }
+            get 
+            {
+                return corredores; 
+            }
         }
 
         public carrera()
@@ -88,20 +100,38 @@ o El corredor más rápido.
 
         public string Nombre
         {
-            set { this.nombre = value; }
-            get { return nombre; }
+            set 
+            {
+                this.nombre = value; 
+            }
+            get 
+            {
+                return nombre; 
+            }
         }
 
         public int Dorsal
         {
-            set { this.dorsal = value; }
-            get { return dorsal; }
+            set 
+            {
+                this.dorsal = value; 
+            }
+            get 
+            {
+                return dorsal; 
+            }
         }
 
         public TimeSpan TiempoTotal
         {
-            set { this.tiempoTotal = value; }
-            get { return tiempoTotal; }
+            set 
+            {
+                this.tiempoTotal = value; 
+            }
+            get 
+            {
+                return tiempoTotal; 
+            }
         }
 
         public corredor(string nombre, int dorsal)
