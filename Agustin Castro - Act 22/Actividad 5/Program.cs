@@ -6,6 +6,23 @@ using System.Threading.Tasks;
 
 namespace Actividad_5
 {
+    /*
+     1. Crear una clase Carrera con:
+o Atributos: código, hora de inicio, hora de fin y lista de corredores ya
+definidos.
+o Dos constructores (uno por defecto y otro con parámetros).
+o Método para calcular la duración de la carrera usando TimeSpan.
+2. Crear una clase Corredor con:
+o Atributos: nombre, número de dorsal y tiempo total.
+o Sobrecarga de métodos para registrar el tiempo total (en minutos o en
+horas y minutos).
+
+3. Mostrar en consola (usando Console.SetCursorPosition()):
+o La carrera con mayor duración.
+o El corredor más rápido.
+4. Utilizar this en los constructores o métodos donde corresponda.
+5. Deben ser 4 carreras.
+    */
     class carrera
     {
         private int codigo;
@@ -164,14 +181,14 @@ namespace Actividad_5
 
 
             TimeSpan duracionMayor = Carreras[0].calcularDuracion();
-            carrera mayorDuracion = Carreras[0];
+            carrera carreraMasLarga = Carreras[0];
 
             for (int i = 1; i < Carreras.Length; i++)
             {
                 if (Carreras[i].calcularDuracion() > duracionMayor)
                 {
                     duracionMayor = Carreras[i].calcularDuracion();
-                    mayorDuracion = Carreras[i];
+                    carreraMasLarga = Carreras[i];
                 }
             }
 
@@ -195,11 +212,11 @@ namespace Actividad_5
             Console.Clear();
 
             Console.SetCursorPosition(25, 25);
-            Console.Write($"La carrera con mayor duración es la de Código: {mayorDuracion.Codigo} con una duración de {duracionMayor}");
+            Console.Write($"La carrera con mayor duración es la de Código: {carreraMasLarga.Codigo} con una duración de {duracionMayor}");
 
             Console.SetCursorPosition(25, 40);
 
-                Console.WriteLine("El corredor más rápido es " + Carreras[auxCarrera].Corredores[auxCorredor].Nombre + " (Dorsal: " + Carreras[auxCarrera].Corredores[auxCorredor].Dorsal + ") con un tiempo de " + Carreras[auxCarrera].Corredores[auxCorredor].TiempoTotal);
+            Console.WriteLine("El corredor más rápido es " + Carreras[auxCarrera].Corredores[auxCorredor].Nombre + " (Dorsal: " + Carreras[auxCarrera].Corredores[auxCorredor].Dorsal + ") con un tiempo de " + Carreras[auxCarrera].Corredores[auxCorredor].TiempoTotal);
 
 
             Console.SetCursorPosition(25, 45);
