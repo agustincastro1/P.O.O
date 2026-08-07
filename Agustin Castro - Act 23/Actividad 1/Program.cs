@@ -83,14 +83,11 @@ acumuladas en la cola de espera utilizando .Count.
         {
             if (documentos.Count > 0)
             {
-                foreach (Documento documento in documentos)
-                {
-                    Console.WriteLine($"nombre del archivo:{documento.NombreArchivo}");
-                    Console.WriteLine($"cantidad de paginas:{documento.CantidadPaginas}");
-                    Console.WriteLine("----------------------------------------------------");
-                    documentos.RemoveAt(0);
-                    System.Threading.Thread.Sleep(1000);
-                }
+                Console.WriteLine("Archivo impreso:");
+                Console.WriteLine($"nombre del archivo:{documentos[0].NombreArchivo}");
+                Console.WriteLine($"cantidad de paginas:{documentos[0].CantidadPaginas}");
+                Console.WriteLine("------------------------------------------------");
+                documentos.RemoveAt(0);
             }
             else
             {
@@ -99,20 +96,57 @@ acumuladas en la cola de espera utilizando .Count.
         }
         public void MostrarColaPendiente()
         {
-            if (documentos.Count > 1)
+            if (documentos.Count > 0)
             {
-                for(int i = 0; i < documentos.Count; i++)
+            Console.WriteLine($"Lista de documentos pendientes ({documentos.Count}):");
+                foreach (Documento documento in documentos)
                 {
-                    if ()
-                    {
-
-                    }
+                    Console.WriteLine($"Nombre del documento: {documento.NombreArchivo}");
+                    Console.WriteLine($"Cantidad de paginas del documento: {documento.CantidadPaginas}");
+                    Console.WriteLine("------------------------------------------------");
                 }
             }
+            else
+            {
+                Console.WriteLine("no hay trabajos pendientes");
+            }
+
         }
         static void Main(string[] args)
         {
-            
+            ServidorImpresion SV = new ServidorImpresion();
+            while (true) {
+                string linea;
+                int eleccion;
+                Console.WriteLine("Eliga una opcion escribiendo su numero:");
+                Console.WriteLine("1. Agregar un nuevo documento | 2. Imprimir documento | 3. Mostrar lista de documentos pendientes | 4. Cerrar impresora");
+
+                linea = Console.ReadLine();
+                eleccion = int.Parse(linea);
+
+                if (eleccion == 1)
+                {
+                    Console.Clear();
+                    SV.AgregarDocumento();
+                    Console.WriteLine("Documento agregado.");
+                }
+                if (eleccion == 2)
+                {
+                    Console.Clear();
+                    SV.ImprimirSiguiente();
+                }
+                if (eleccion == 3)
+                {
+                    Console.Clear();
+                    SV.MostrarColaPendiente();
+                }
+                if (eleccion == 4)
+                {
+                    Console.Clear();
+                    break;
+                }
+            }
+            Console.ReadKey();
         }
     }
 }
