@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DF8AF367-A3E8-4303-8ECF-FF83B186E6D6}</ProjectGuid>
+    <ProjectGuid>{E3704DDB-B870-444A-B56B-6A8F9FEFC901}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Actividad_5</RootNamespace>
-    <AssemblyName>Actividad 5</AssemblyName>
+    <RootNamespace>Actividad_6</RootNamespace>
+    <AssemblyName>Actividad_6</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
