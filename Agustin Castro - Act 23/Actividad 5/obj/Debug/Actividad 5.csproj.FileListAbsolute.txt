@@ -1,7 +1,0 @@
-C:\Users\Agus\Desktop\P.O.O\Actividad 5\bin\Debug\Actividad 5.exe.config
-C:\Users\Agus\Desktop\P.O.O\Actividad 5\bin\Debug\Actividad 5.exe
-C:\Users\Agus\Desktop\P.O.O\Actividad 5\bin\Debug\Actividad 5.pdb
-C:\Users\Agus\Desktop\P.O.O\Actividad 5\obj\Debug\Actividad 5.csproj.AssemblyReference.cache
-C:\Users\Agus\Desktop\P.O.O\Actividad 5\obj\Debug\Actividad 5.csproj.CoreCompileInputs.cache
-C:\Users\Agus\Desktop\P.O.O\Actividad 5\obj\Debug\Actividad 5.exe
-C:\Users\Agus\Desktop\P.O.O\Actividad 5\obj\Debug\Actividad 5.pdb
