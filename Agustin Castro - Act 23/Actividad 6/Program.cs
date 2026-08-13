@@ -33,7 +33,6 @@ colección si se encuentra presente.
     {
         public class Libro
         {
-            // Atributos privados
             private string titulo;
             private int añoPublicacion;
 
@@ -47,14 +46,14 @@ colección si se encuentra presente.
                 get { return añoPublicacion; }
             }
 
-            // Constructor
+
             public Libro(string tit, int anio)
             {
                 this.titulo = tit;
                 this.añoPublicacion = anio;
             }
 
-            // Método auxiliar para mostrar los datos del libro
+
             public void MostrarInformacion()
             {
                 Console.WriteLine($"Título: {Titulo} | Año de Publicación: {AñoPublicacion}");
@@ -63,7 +62,7 @@ colección si se encuentra presente.
     }
     public class BibliotecaCentral
     {
-        // Lista de libros que administra la biblioteca
+
         private List<Libro> catalogo;
 
         public BibliotecaCentral()
@@ -71,7 +70,7 @@ colección si se encuentra presente.
             catalogo = new List<Libro>();
         }
 
-        // 1. CargarCatalogo(): Carga iterativa que finaliza al ingresar "FIN"
+
         public void CargarCatalogo()
         {
             Console.WriteLine("Cargar catalogo");

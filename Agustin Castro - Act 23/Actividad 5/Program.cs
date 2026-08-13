@@ -72,7 +72,7 @@ cobrar.
     }
     class GestionTaller
     {
-        // Lista de vehículos alojados en el taller
+
         private List<Vehiculo> listaVehiculos;
 
         public GestionTaller()
@@ -80,7 +80,7 @@ cobrar.
             listaVehiculos = new List<Vehiculo>();
         }
 
-        // 1. IngresarVehiculo(): Pide datos por teclado y agrega mediante .Add()
+
         public void IngresarVehiculo()
         {
             string linea;
@@ -104,7 +104,7 @@ cobrar.
             }
         }
 
-        // 2. BuscarVehiculo(): Pide patente, recorre la lista e informa costo
+
         public void BuscarVehiculo()
         {
             Console.WriteLine("Buscar vehiculo");
@@ -130,7 +130,6 @@ cobrar.
             }
         }
 
-        // 3. EntregarVehiculo(): Busca por patente y remueve mediante .Remove()
         public void EntregarVehiculo()
         {
             Console.WriteLine("Entregar Vehiculo");
@@ -156,7 +155,7 @@ cobrar.
             }
         }
 
-        // 4. CalcularRecaudacionPendiente(): Muestra vehículos, .Count y suma acumulada
+
         public void CalcularRecaudacionPendiente()
         {
             Console.WriteLine("Recaudacion pendiente y estado del taller");
