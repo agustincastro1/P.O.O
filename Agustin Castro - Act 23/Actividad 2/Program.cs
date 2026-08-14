@@ -149,7 +149,6 @@ cantidad de drones operativos utilizando la propiedad .Count.
                 {
                     Console.Clear();
                     C.listaFlota();
-                    Console.WriteLine("Documento agregado.");
                 }
                 if (eleccion == 2)
                 {
